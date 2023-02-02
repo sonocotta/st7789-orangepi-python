@@ -18,16 +18,16 @@ Make sure you have the following dependencies:
 
 ````
 sudo apt-get update
-sudo apt-get install python-OPi.gpio python-spidev python-pip python-pil python-numpy
+sudo apt-get install python-spidev python-pip python-pil python-numpy
 ````
 
 Install this library by running:
 
 ````
-sudo pip install st7789
+sudo pip install OrangePi.ST7789
 ````
 
-You might also need to enable I2C and SPI in raspi-config. See example of usage in the examples folder.
+You might also need to enable SPI in armbian-config. See example of usage in the examples folder.
 
 
 # Licensing & History
@@ -36,11 +36,13 @@ This library is a modification of a modification of code originally written by T
 
 To create this ST7789 driver, it has been hard-forked from st7735-python which was originally modified by Pimoroni to include support for their 160x80 SPI LCD breakout.
 
+Later fork was created to add support for Orange Pi SBCs running Armbian
+
 ## Modifications include:
 
 * PIL/Pillow has been removed from the underlying display driver to separate concerns- you should create your own PIL image and display it using `display(image)`
 * `width`, `height`, `rotation`, `invert`, `offset_left` and `offset_top` parameters can be passed into `__init__` for alternate displays
-* `Adafruit_GPIO` has been replaced with `OPi.GPIO` and `spidev` to closely align with our other software (IE: Raspberry Pi only)
+* `Adafruit_GPIO` has been replaced with `OPi.GPIO` and `spidev` to closely align with our other software (IE: Orange Pi only)
 * Test fixtures have been added to keep this library stable
 
 Pimoroni invests time and resources forking and modifying this open source code, please support Pimoroni and open-source software by purchasing products from us, too!
@@ -52,6 +54,11 @@ Modified from 'Modified from 'Adafruit Python ILI9341' written by Tony DiCola fo
 MIT license, all text above must be included in any redistribution
 
 # Changelog
+
+0.0.5
+-----
+* Add support for OrangePi SBCs running Armbian
+* Updated examples
 
 0.0.4
 -----
