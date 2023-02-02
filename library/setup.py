@@ -10,9 +10,9 @@ classifiers = ['Development Status :: 4 - Beta',
                'Topic :: Software Development',
                'Topic :: System :: Hardware']
 
-setup(name='ST7789',
+setup(name='OrangePi.ST7789',
       version='0.0.4',
-      description='Library to control ST7789 TFT LCD displays.',
+      description='Library to control ST7789 TFT LCD displays on the Orange Pi.',
       long_description=open('README.md').read(),
       long_description_content_type='text/markdown',
       license='MIT',
@@ -20,4 +20,9 @@ setup(name='ST7789',
       author_email='phil@pimoroni.com',
       classifiers=classifiers,
       url='https://github.com/pimoroni/st7789-python/',
-      packages=find_packages())
+      packages=find_packages(),
+      install_requires=[
+            'OPi.GPIO',
+            'spidev',
+            'Pillow'
+      ])

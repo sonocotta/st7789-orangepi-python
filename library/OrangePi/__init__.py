@@ -23,7 +23,7 @@ import time
 import numpy as np
 
 import spidev
-import RPi.GPIO as GPIO
+import OPi.GPIO as GPIO
 
 
 __version__ = '0.0.4'
