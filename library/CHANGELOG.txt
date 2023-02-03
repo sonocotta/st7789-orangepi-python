@@ -1,4 +1,4 @@
-0.0.5
+1.0.0
 -----
 * Add support for OrangePi SBCs running Armbian
 * Updated examples
