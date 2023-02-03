@@ -1,11 +1,12 @@
-name: Upload Package to PyPI
+name: Build and upload Package
 
 on:
+  pull_request:
   push:
     branches:
     - master
     - releases/*
-    - features/*
+    - features/*  
 
 jobs:
   upload:
