@@ -30,7 +30,7 @@ jobs:
         python3 setup.py build
         python3 setup.py sdist
 
-    name: Debug ref
+    - name: Debug ref
       run: |
         echo "${{ github.ref }}"
 
