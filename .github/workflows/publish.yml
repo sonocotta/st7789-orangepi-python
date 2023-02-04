@@ -30,6 +30,10 @@ jobs:
         python3 setup.py build
         python3 setup.py sdist
 
+    name: Debug ref
+      run: |
+        echo "${{ github.ref }}"
+
     - name: Publish package to PyPI
       if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
       uses: pypa/gh-action-pypi-publish@release/v1
