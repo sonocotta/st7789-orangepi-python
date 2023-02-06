@@ -20,13 +20,12 @@
 # THE SOFTWARE.
 import numbers
 import time
-import numpy as np
 
 import spidev
 import OPi.GPIO as GPIO
 
 
-__version__ = '1.0.1'
+__version__ = '1.1.0'
 
 BG_SPI_CS_BACK = 0
 BG_SPI_CS_FRONT = 1
@@ -342,8 +341,8 @@ class ST7789(object):
             self.data(pixelbytes[i:i + 4096])
 
     def image_to_data(self, image, rotation=0):
-        if not isinstance(image, np.ndarray):
-            image = np.array(image.convert('RGB'))
+        # if not isinstance(image, np.ndarray):
+        #     image = np.array(image.convert('RGB'))
 
         # Rotate the image
         pb = np.rot90(image, rotation // 90).astype('uint16')
