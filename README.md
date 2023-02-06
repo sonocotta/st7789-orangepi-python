@@ -4,8 +4,7 @@ Python library to control ST7789 TFT LCD displays on the Orange Pi.
 
 Designed to work with the following ST7789 based SPI breakouts and Orange Pi Extension:
 
-- [Orange PI Hi-Fi Hat
-](https://sonocotta.com/orange-pi-hi-fi-hat/)
+- [Orange PI Hi-Fi Hat](https://sonocotta.com/orange-pi-hi-fi-hat/)
 
 # Installation
 
@@ -22,7 +21,7 @@ Install this library by running:
 sudo pip3 install OrangePi.ST7789
 ````
 
-You will also need to make sure I2C and SPI are enabled in raspi-config (`sudo raspi-config`) - you can find them under Interface Options. 
+You will also need to make sure SPI is enabled in armbian-config (`sudo armbian-config`) - you can find them under Interface Options. 
 
 # Examples
 
@@ -57,10 +56,6 @@ To create this ST7789 driver, it has been hard-forked from st7735-python which w
 * `Adafruit_GPIO` has been replaced with `OPi.GPIO` and `spidev` to closely align with our other software (IE: Orange Pi only)
 * Test fixtures have been added to keep this library stable
 
-Pimoroni invests time and resources forking and modifying this open source code, please support Pimoroni and open-source software by purchasing products from us, too!
-
-Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit!
-
-Modified from 'Modified from 'Adafruit Python ILI9341' written by Tony DiCola for Adafruit Industries.' written by Clement Skau.
+Modified from 'Adafruit Python ILI9341' written by Tony DiCola for Adafruit Industries.
 
 MIT license, all text above must be included in any redistribution
