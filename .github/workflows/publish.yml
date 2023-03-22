@@ -25,7 +25,7 @@ jobs:
         python -m pip install --upgrade setuptools twine
     
     - name: Build package
-      working-directory: library
+      working-directory: .
       run: |
         python3 setup.py build
         python3 setup.py sdist
@@ -34,5 +34,7 @@ jobs:
       if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/master')
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
+        skip_existing: true
+        print_hash: true
         password: ${{ secrets.PYPI_API_TOKEN }}
-        packages_dir: library/dist
+        packages_dir: ./dist

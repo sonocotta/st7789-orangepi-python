@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from OrangePi import ST7789
+from OrangePi_ST7789 import ST7789
 from PIL import Image, ImageDraw
 
 import time

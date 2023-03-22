@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from PIL import Image
-from OrangePi import ST7789
+from OrangePi_ST7789 import ST7789
 import time
 import sys
 

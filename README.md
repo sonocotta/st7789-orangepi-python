@@ -12,7 +12,7 @@ First, make sure you have the following dependencies:
 
 ````bash
 sudo apt update
-sudo apt install python3-spidev python3-pip python3-pil python3-numpy
+sudo apt install python3-spidev python3-pip python3-pil
 ````
 
 Install this library by running:
@@ -54,7 +54,6 @@ To create this ST7789 driver, it has been hard-forked from st7735-python which w
 * PIL/Pillow has been removed from the underlying display driver to separate concerns- you should create your own PIL image and display it using `display(image)`
 * `width`, `height`, `rotation`, `invert`, `offset_left` and `offset_top` parameters can be passed into `__init__` for alternate displays
 * `Adafruit_GPIO` has been replaced with `OPi.GPIO` and `spidev` to closely align with our other software (IE: Orange Pi only)
-* Test fixtures have been added to keep this library stable
 
 Modified from 'Adafruit Python ILI9341' written by Tony DiCola for Adafruit Industries.
 
