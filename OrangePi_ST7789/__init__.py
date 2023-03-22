@@ -20,6 +20,7 @@
 # THE SOFTWARE.
 import numbers
 import time
+import numpy as np
 
 import spidev
 import OPi.GPIO as GPIO
