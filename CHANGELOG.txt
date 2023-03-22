@@ -1,6 +1,6 @@
-1.1.0
+1.1.1
 -----
-* Drop NumPy dependency
+* Project restructuring
 
 
 1.0.1
